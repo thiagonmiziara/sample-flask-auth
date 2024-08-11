@@ -26,38 +26,36 @@ Este projeto é uma aplicação web simples construída com Flask, que implement
 2. Crie um ambiente virtual e ative-o:
 
 ```bash
-  python -m venv venv
-  source venv/bin/activate  # Para Linux/Mac
-  venv\Scripts\activate  # Para Windows
+ python -m venv venv
+ source venv/bin/activate  # Para Linux/Mac
+ venv\Scripts\activate  # Para Windows
 ```
 
 3. Instale as dependências:
+
    ```bash
-    pip install -r requirements.txt
+   pip install -r requirements.txt
    ```
 
-````
 4. Configure o banco de dados MySQL. Utilize o Docker para criar um container MySQL com as seguintes configurações:
 
-  services:
+services:
 db:
-  image: mysql:latest
-  restart: always
-  environment:
-    MYSQL_USER: "admin"
-    MYSQL_PASSWORD: "admin123"
-    MYSQL_DATABASE: "flask-crud"
-    MYSQL_ROOT_PASSWORD: "admin123"
-  ports:
-    - "3306:3306"
-  volumes:
-    - sua pasta de armazenamento
-
+image: mysql:latest
+restart: always
+environment:
+MYSQL_USER: "admin"
+MYSQL_PASSWORD: "admin123"
+MYSQL_DATABASE: "flask-crud"
+MYSQL_ROOT_PASSWORD: "admin123"
+ports: - "3306:3306"
+volumes: - sua pasta de armazenamento
 
 5. Execute a aplicação:
+
 ```bash
   python app.py
-````
+```
 
 ## Endpoints
 
