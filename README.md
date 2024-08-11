@@ -39,6 +39,7 @@ Este projeto é uma aplicação web simples construída com Flask, que implement
 
 4. Configure o banco de dados MySQL. Utilize o Docker para criar um container MySQL com as seguintes configurações:
 
+```
 services:
 db:
 image: mysql:latest
@@ -50,6 +51,8 @@ MYSQL_DATABASE: "flask-crud"
 MYSQL_ROOT_PASSWORD: "admin123"
 ports: - "3306:3306"
 volumes: - sua pasta de armazenamento
+
+```
 
 5. Execute a aplicação:
 
